@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Fitness</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="section__header mt-5 mb-5" align="center">
+        <h1 class="title">Calcula Tú Objetivo Calorico</h1>
+      </header>
+      <div>
+        <form>
+          <div class="row mb-3">
+            <div class="col col-6">
+              <label for="gender" class="form-label">Género</label>
+              <select class="form-select" id="gender" name="gender" required>
+                <option selected></option>
+              </select>
+            </div>
+
+            <div class="col col-6">
+              <label for="goalType" class="form-label">Objetivo</label>
+              <select
+                class="form-select"
+                id="goalType"
+                name="goalType"
+                required
+              >
+                <option selected></option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col col-6">
+              <label for="weightInKg" class="form-label">Peso (Kg)</label>
+              <input
+                type="number"
+                name="weightInKg"
+                class="form-control"
+                id="weightInKg"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="col col-6">
+              <label for="caloriePercentageValue" class="form-label"
+                >Porcentaje</label
+              >
+              <select
+                class="form-select"
+                id="caloriePercentageValue"
+                name="caloriePercentageValue"
+                required
+              >
+                <option selected></option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col col-6">
+              <label for="gramOfProteinPerKgOfWeight" class="form-label"
+                >Gramos de Proteína</label
+              >
+              <select
+                class="form-select"
+                id="gramOfProteinPerKgOfWeight"
+                name="gramOfProteinPerKgOfWeight"
+                required
+              >
+                <option selected></option>
+              </select>
+            </div>
+
+            <div class="col col-6">
+              <label for="gramOfFatPerKgOfWeight" class="form-label"
+                >Gramos de Grasa</label
+              >
+              <select
+                class="form-select"
+                id="gramOfFatPerKgOfWeight"
+                name="gramOfFatPerKgOfWeight"
+                required
+              >
+                <option selected></option>
+              </select>
+            </div>
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto mt-5 mb-5">
+            <button type="submit" class="btn btn-primary fit-btn">
+              Calcular
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="calorieError"></div>
+      <div id="loader"></div>
+
+      <div class="container calorie-card">
+        <pre id="caloriePage"></pre>
+        <!-- <div class="row">
+            <div class="col-12">
+              <h2 class="text-center">Distribución de Macronutrientes</h2>
+            </div>
+          </div> -->
+
+        <!--<div class="row justify-content-end">
+            <div class="col-3">
+              <p class="text-center">Gramos</p>
+            </div>
+            <div class="col-3">
+              <p class="text-center">calorias</p>
+            </div>
+            <div class="col-3">
+              <p class="text-center">Porcentaje</p>
+            </div>
+          </div>
+
+          <div class="row justify-content-start">
+            <div class="col-3">
+              <p class="text-center mb-4">Proteínas</p>
+            </div>
+            <div class="col-3">
+              <p class="text-center">48</p>
+            </div>
+            <div class="col-3">
+              <p class="text-center">192</p>
+            </div>
+            <div class="col-3">
+              <p class="text-center">18.31</p>
+            </div>
+          </div>-->
+      </div>
+    </main>
+    <script src="/src/app.js" type="module"></script>
+  </body>
+</html>
